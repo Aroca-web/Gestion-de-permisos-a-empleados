@@ -18,6 +18,7 @@ Este sistema automatiza el proceso de incorporación de nuevos empleados, elimin
 * **Panel de Administración:** Gestión centralizada de usuarios, roles y definición de reglas de campaña.
 * **Auditoría de Accesos:** Registro de qué permisos han sido otorgados para cumplir con normativas de seguridad.
 * **Interfaz Intuitiva:** Desarrollada para que el equipo de Operaciones o RRHH pueda dar de alta a un trabajador en segundos.
+* **Conexión con administracdores:** Gracias al envío de datos en formato pdf a través de correo electrónico.
 
 ## 🛠️ Stack Tecnológico
 
