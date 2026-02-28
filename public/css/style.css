@@ -1,0 +1,438 @@
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --secondary: #64748b;
+    --success: #10b981;
+    --danger: #ef4444;
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --radius: 12px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 40px;
+}
+
+#logo {
+    width: 150px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+form#formulario {
+    background: var(--card-bg);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+/* Breadcrumb Styling */
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.breadcrumb-item a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumb-item.active {
+    color: var(--text-muted);
+}
+
+/* Typography */
+h2 {
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Accordion Modernization */
+/* Accordion Modernization */
+.accordion-item {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius) !important;
+    overflow: hidden;
+    margin-bottom: 24px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+    /* Re-mapped to suit existing class usage but styling the button inside usually */
+    background-color: #f8fafc;
+    color: var(--text-main);
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.accordion-header:hover {
+    background-color: #eff6ff;
+    color: var(--primary);
+}
+
+.accordion-content {
+    background: white;
+    /* Removed direct vertical padding to allow height:0 to hide element completely */
+    padding: 0 1.5rem;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+    border-top: 1px solid var(--border-color);
+}
+
+
+
+/* Ensure inner content has spacing */
+.accordion-content>*:first-child {
+    margin-top: 1.5rem;
+}
+
+.accordion-content>*:last-child {
+    margin-bottom: 1.5rem;
+}
+
+/* Form Controls */
+label {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.925rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    /* Force full width within columns */
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 0.95rem;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    margin-bottom: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Checkboxes & Cards */
+.checks .d-flex {
+    background: #f9fafb;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.2s;
+    margin-bottom: 0.5rem;
+}
+
+.checks .d-flex:hover {
+    border-color: var(--primary);
+    background: #eef2ff;
+}
+
+.checks input[type="checkbox"] {
+    margin: 0 1rem 0 0 !important;
+    /* Override inline styles */
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.625rem 1.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    letter-spacing: 0.025em;
+    transition: transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: var(--primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-success {
+    background: var(--success);
+    border: none;
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    border: none;
+}
+
+/* Modals */
+.modal-content {
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.modal-header {
+    border-bottom: 1px solid #f3f4f6;
+    padding: 1.5rem;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.glass-modal {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Helpers */
+.text-danger {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Print Overrides */
+/* Print Overrides */
+@media print {
+    @page {
+        margin: 0.5cm;
+        size: A4;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        /* Very small base font */
+        background: white;
+        color: black;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Layout Reset */
+    .container-fluid,
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    form#formulario {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Hide Navigation & Buttons */
+    .btn,
+    nav,
+    .text-end,
+    .breadcrumb,
+    #btn-admin,
+    .modal,
+    footer {
+        display: none !important;
+    }
+
+    /* Compact Header */
+    #logo {
+        width: 80px;
+        margin: 0 0 5px 0;
+    }
+
+    h2 {
+        font-size: 14px;
+        margin: 0 0 10px 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    /* Compact Sections (Accordions) */
+    section {
+        margin-bottom: 5px;
+        page-break-inside: avoid;
+    }
+
+    .accordion-item {
+        border: 1px solid #000;
+        margin-bottom: 5px;
+    }
+
+    .accordion-header {
+        padding: 2px 5px;
+        background: #eee !important;
+        font-size: 11px;
+        font-weight: bold;
+        border-bottom: 1px solid #ccc;
+        margin: 0;
+        min-height: auto;
+    }
+
+    .accordion-content {
+        display: block !important;
+        height: auto !important;
+        padding: 5px !important;
+        overflow: visible !important;
+    }
+
+    /* Grid System Override for Print */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+    }
+
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6 {
+        padding: 0 5px;
+        margin-bottom: 2px;
+    }
+
+    /* Force 3 Columns for Inputs to save vertical space */
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-6 {
+        width: 33.33% !important;
+        flex: 0 0 33.33% !important;
+        max-width: 33.33% !important;
+    }
+
+    /* Exceptions for full-width elements */
+    .col-md-12 {
+        width: 100% !important;
+    }
+
+    /* Compact Inputs */
+    label {
+        font-size: 9px;
+        font-weight: bold;
+        margin-bottom: 0;
+        display: block;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 10px;
+        padding: 1px 2px;
+        height: auto;
+        border: 1px solid #666 !important;
+        border-radius: 0;
+        background: white !important;
+        box-shadow: none;
+        margin-bottom: 2px;
+        width: 100%;
+    }
+
+    textarea {
+        height: 40px !important;
+        resize: none;
+    }
+
+    /* Limit text area height */
+
+    /* Special handling for checkboxes/radios */
+    .checks .d-flex {
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        background: transparent !important;
+    }
+
+    .check-marca,
+    input[type="checkbox"] {
+        -webkit-appearance: checkbox !important;
+        appearance: checkbox !important;
+        display: inline-block !important;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px !important;
+        border: 1px solid #000 !important;
+    }
+
+    /* Force "Anexo" to new page */
+    #print-summary {
+        break-before: page;
+        margin-top: 0;
+        padding-top: 20px;
+        border-top: none;
+    }
+
+    #print-summary h4 {
+        font-size: 14px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #000;
+    }
+
+    #print-summary .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #print-summary .col-6 {
+        width: 33.33% !important;
+    }
+
+    /* Utilities */
+    .mt-4,
+    .mb-4,
+    .mb-3,
+    .p-2,
+    .p-3 {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .d-print-none {
+        display: none !important;
+    }
+}
