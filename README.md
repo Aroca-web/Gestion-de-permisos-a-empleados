@@ -50,6 +50,6 @@ php artisan migrate --seed
 php artisan serve
 
 
-##💡 Sobre el Autor
+💡 Sobre el Autor
 Este proyecto forma parte del ecosistema de soluciones de aroca web.
 Mi enfoque es unir mi experiencia como Técnico Informático (entendiendo las necesidades de hardware y acceso) con el Desarrollo Web para crear herramientas que optimicen el día a día de las empresas.
